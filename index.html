@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<script language="javascript" >
+    var content = 3;
+    function onload() {
+        var i;
+        var c = document.querySelector("#content");
+        var f = () => {
+            c.innerText = content;
+            if (content > 0) {
+                content --;
+            } else {
+                c.innerText = "Welcome to KRAWD";
+                clearInterval(i);
+            }
+        }
+        i = setInterval(f, 1000);
+        f();
+    }
+
+    window.addEventListener("load", onload)
+
+</script>
+<style>
+    div {
+        display: flex;
+        align-items: center;
+        width : 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    html, body {
+        height: 100%;
+        padding: 0;
+    }
+</style>
+<script src="hello.js" language="JavaScript"></script>
+<body>
+
+<div id="content"></div>
+
+</body>
+</html>
